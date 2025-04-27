@@ -1,11 +1,11 @@
 // MainActivity.kt
 package com.example.mygame1
 
-//import android.content.Context
+import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-//import android.os.Vibrator
+import android.os.Vibrator
 import android.view.View
 import android.widget.GridLayout
 import android.widget.ImageView
@@ -56,13 +56,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateUI() {
-        for (col in 0 until 3) {
-            for (row in 0 until 6) {
-               // val bombId = resources.getIdentifier("bomb_${col}_${row}", "id", packageName)
-               // val bomb = findViewById<View>(bombId)
-              //  bomb?.visibility = if (gameManager.matrix[col][row]) View.VISIBLE else View.INVISIBLE
-            }
-        }
+//        for (col in 0 until 3) {
+//            for (row in 0 until 6) {
+////               val bombId = resources.getIdentifier("bomb_${col}_${row}", "id", packageName)
+////                val bomb = findViewById<View>(bombId)
+////                bomb?.visibility = if (gameManager.matrix[col][row]) View.VISIBLE else View.INVISIBLE
+//            }
+//        }
 
         val cat = findViewById<ImageView>(R.id.cat)
         val params = cat.layoutParams as GridLayout.LayoutParams
@@ -74,6 +74,13 @@ class MainActivity : AppCompatActivity() {
         findViewById<AppCompatImageButton>(R.id.heart2).visibility = if (gameManager.lives >= 2) View.VISIBLE else View.INVISIBLE
         findViewById<AppCompatImageButton>(R.id.heart3).visibility = if (gameManager.lives >= 3) View.VISIBLE else View.INVISIBLE
     }
+//    @Suppress("DEPRECATION")
+//    private fun vibrate() {
+//        val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+//          vibrator.vibrate(200)
+//    }
+
+
 }
 
 

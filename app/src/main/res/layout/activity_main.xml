@@ -19,18 +19,21 @@
             android:id="@+id/heart1"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:contentDescription="Heart1"
             android:src="@drawable/heart" />
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/heart2"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:contentDescription="Heart2"
             android:src="@drawable/heart" />
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/heart3"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:contentDescription="Heart3"
             android:src="@drawable/heart" />
     </LinearLayout>
 
