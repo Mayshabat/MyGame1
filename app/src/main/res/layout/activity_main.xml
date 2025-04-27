@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2196F3"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/heart1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/heart" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/heart2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/heart" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/heart3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/heart" />
+    </LinearLayout>
+
+    <!-- מטריצת משחק 3x6 -->
+
+    <GridLayout
+        android:id="@+id/game_board"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+
+        android:columnCount="3"
+        android:rowCount="6"
+        android:layout_gravity="center">
+
+
+
+        <!-- פצצות שנופלות -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/bomb_0_0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_gravity="fill"
+        app:srcCompat="@drawable/bomb" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bomb_0_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/bomb" />
+
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bomb_0_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/bomb" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bomb_1_0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/bomb" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bomb_1_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/bomb" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bomb_1_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/bomb" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bomb_2_0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/bomb" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bomb_2_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/bomb" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bomb_2_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/bomb" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bomb_3_0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/bomb" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bomb_3_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/bomb" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bomb_3_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/bomb" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bomb_4_0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/bomb" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bomb_4_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/bomb" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bomb_4_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/bomb" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bomb_5_0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/bomb" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bomb_5_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/bomb" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bomb_5_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/bomb" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/cat"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/cat" />
+    </GridLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="10dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/buttonLeft"
+            android:layout_width="128dp"
+            android:layout_height="47dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginBottom="9dp"
+            android:contentDescription="Move Left"
+            android:scaleType="fitCenter"
+            android:src="@drawable/left" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/buttonRight"
+            android:layout_width="124dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="Move Right"
+            android:src="@drawable/right" />
+    </RelativeLayout>
+</LinearLayout>
+
+
