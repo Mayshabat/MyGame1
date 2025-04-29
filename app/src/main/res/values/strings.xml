@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">My Game1</string>
+    <string name="move_left">Move Left</string>
+    <string name="move_right">Move Right</string>
+    <string name="heart1_desc">Life 1</string>
+    <string name="heart2_desc">Life 2</string>
+    <string name="heart3_desc">Life 3</string>
 </resources>
