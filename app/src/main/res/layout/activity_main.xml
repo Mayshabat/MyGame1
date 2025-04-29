@@ -5,7 +5,7 @@
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2196F3"
+    android:background="@color/blue"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".MainActivity">
@@ -37,7 +37,7 @@
             android:contentDescription="@string/heart3_desc" />
     </LinearLayout>
 
-    <!-- מטריצת משחק 3x6 -->
+
 
     <GridLayout
         android:id="@+id/game_board"
@@ -51,7 +51,7 @@
 
 
 
-        <!-- פצצות שנופלות -->
+
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/bomb_0_0"
             android:layout_width="0dp"

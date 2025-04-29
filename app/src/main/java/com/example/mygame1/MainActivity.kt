@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var gameBoard: GridLayout
     private lateinit var cats: Array<ImageView>
     private lateinit var hearts: Array<ImageView>
-    private val activeBombs = mutableListOf<Bomb>()
+//    private val activeBombs = mutableListOf<Bomb>()
 
 
 
@@ -90,85 +90,6 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-//    private fun spawnBomb() {
-//        val randomCol = (0..2).random()
-//
-//        // ניצור פצצה חדשה רק אם אין פצצה למעלה בעמודה
-//        if (bombsMatrix[randomCol][0].visibility == View.INVISIBLE) {
-//            bombsMatrix[randomCol][0].visibility = View.VISIBLE
-//        }
-//    }
-//private fun spawnBomb() {
-//    val randomCol = (0..2).random()
-//
-//    // בודקים שאין כבר פצצה בשורה 0 באותו עמודה
-//    val alreadyExists = activeBombs.any { it.col == randomCol && it.row == 0 }
-//
-//    if (!alreadyExists) {
-//        activeBombs.add(Bomb(randomCol, 0))
-//    }
-//}
-
-
-
-
-
-
-
-
-    private fun moveBombsDown() {
-        // קודם כל מנקים את כל התצוגה
-        for (col in 0..2) {
-            for (row in 0..5) {
-                bombsMatrix[col][row].visibility = View.INVISIBLE
-            }
-        }
-
-        // מעדכנים את מיקום הפצצות
-        val iterator = activeBombs.iterator()
-        while (iterator.hasNext()) {
-            val bomb = iterator.next()
-            bomb.row++ // ירידה שורה
-
-            if (bomb.row > 5) {
-                // פצצה ירדה מתחת למסך
-                iterator.remove()
-            } else {
-                bombsMatrix[bomb.col][bomb.row].visibility = View.VISIBLE
-            }
-        }
-    }
-
-
-
-
-
-//    private fun checkCollisions() {
-//        for (col in 0..2) {
-//            if (bombsMatrix[col][5].visibility == View.VISIBLE && col == gameManager.catCol) {
-//                bombsMatrix[col][5].visibility = View.INVISIBLE
-//                handleCollision()
-//            }
-//        }
-//    }
-
-
-//    private fun checkCollisions() {
-//        val iterator = activeBombs.iterator()
-//        while (iterator.hasNext()) {
-//            val bomb = iterator.next()
-//            if (bomb.row == 5 && bomb.col == gameManager.catCol) {
-//                bombsMatrix[bomb.col][bomb.row].visibility = View.INVISIBLE
-//                iterator.remove()
-//                handleCollision()
-//                break
-//            }
-//        }
-//    }
-
-
-
-
     private fun dropBomb(column: Int) {
         if (columnInUse[column]) return
         columnInUse[column] = true
@@ -233,10 +154,9 @@ class MainActivity : AppCompatActivity() {
         updateHearts()
 
         if (gameManager.isGameOver()) {
-//            SignalManager.toast(this, "המשחק נגמר!")
             isRunning = false
             goToGameOverScreen()
-//            showGameOverDialog()
+
         }
     }
     private fun goToGameOverScreen() {
@@ -245,41 +165,6 @@ class MainActivity : AppCompatActivity() {
         finish()
     }
 
-    //    private fun showGameOverDialog() {
-//        val builder = androidx.appcompat.app.AlertDialog.Builder(this)
-//        builder.setTitle("Game Over")
-//        builder.setMessage("נגמרו לך כל החיים. רוצה לשחק שוב?")
-//        builder.setPositiveButton("נסה שוב") { _, _ ->
-//            restartGame()
-//        }
-//        builder.setNegativeButton("סיים") { _, _ ->
-//            finish()
-//        }
-//        builder.setCancelable(false)
-//        builder.show()
-//    }
-    private fun restartGame() {
-        gameManager.lives = 3
-        gameManager.catCol = 1
-        isRunning = true
-
-        updateCatPosition()
-        updateHeartsFull()
-        clearBombs()
-        startGameLoop()
-    }
-    private fun updateHeartsFull() {
-        for (heart in hearts) {
-            heart.visibility = View.VISIBLE
-        }
-    }
-    private fun clearBombs() {
-        for (col in 0..2) {
-            for (row in 0..5) {
-                bombsMatrix[col][row].visibility = View.INVISIBLE
-            }
-        }
-    }
 
     private fun updateHearts() {
         when (gameManager.lives) {
@@ -288,9 +173,6 @@ class MainActivity : AppCompatActivity() {
             0 -> hearts[0].visibility = View.INVISIBLE
         }
     }
-
-
-
 
 private fun updateCatPosition() {
     for (i in 0..2) {
