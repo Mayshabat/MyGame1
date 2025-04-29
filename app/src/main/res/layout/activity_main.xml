@@ -7,34 +7,48 @@
     android:layout_height="match_parent"
     android:background="@color/blue"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="@dimen/default_margin"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp">
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/default_margin">
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/heart1"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/heart_dimens"
+            android:layout_height="@dimen/heart_dimens"
             android:src="@drawable/heart"
+            android:background="@android:color/transparent"
+            android:clickable="false"
+            android:focusable="false"
             android:contentDescription="@string/heart1_desc" />
+
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/heart2"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/heart_dimens"
+            android:layout_height="@dimen/heart_dimens"
             android:src="@drawable/heart"
+            android:background="@android:color/transparent"
+            android:clickable="false"
+            android:focusable="false"
+            android:layout_marginHorizontal="@dimen/heart_margin"
             android:contentDescription="@string/heart2_desc" />
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/heart3"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/heart_dimens"
+            android:layout_height="@dimen/heart_dimens"
             android:src="@drawable/heart"
+            android:background="@android:color/transparent"
+            android:clickable="false"
+            android:focusable="false"
+            android:visibility="visible"
             android:contentDescription="@string/heart3_desc" />
+
     </LinearLayout>
 
 
